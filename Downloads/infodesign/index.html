@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Noise Levels Visualization</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Noise Levels Across Library Spaces</h1>
+        <p class="subtitle">Interactive visualization of decibel levels over time</p>
+        
+        <div class="controls">
+            <div class="legend">
+                <h3>Locations:</h3>
+                <div id="legend"></div>
+            </div>
+            <div class="info-panel">
+                <div id="tooltip" class="tooltip"></div>
+            </div>
+        </div>
+        
+        <div id="chart"></div>
+        
+        <div class="brush-container">
+            <h3>Time Range Selector</h3>
+            <div id="brush-chart"></div>
+        </div>
+        
+        <div class="bubble-chart-container">
+            <h2>Bubble Chart: Noise Levels Over Time</h2>
+            <p class="subtitle">Circle size represents decibel level</p>
+            <div id="bubble-chart"></div>
+        </div>
+        
+        <div class="library-shelves-container">
+            <h2>Library Shelves: Noise as Books</h2>
+            <p class="subtitle">Each shelf represents a location. Book height = noise level. Books are arranged by time.</p>
+            <div id="library-shelves"></div>
+        </div>
+        
+        <div class="waveform-container">
+            <h2>Sound Wave: Noise Levels Over Time</h2>
+            <p class="subtitle">Watch noise levels fluctuate like audio waves. Wave amplitude = decibel level.</p>
+            <div class="waveform-controls">
+                <button id="playPauseBtn" class="play-btn">▶ Play</button>
+                <button id="resetBtn" class="reset-btn">Reset</button>
+                <span id="timeDisplay" class="time-display">Time: 6:04 AM</span>
+            </div>
+            <div id="waveform-chart"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
